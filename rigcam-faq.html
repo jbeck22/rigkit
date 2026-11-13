@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rigcam FAQ | Rigcam and Rigdesk</title>
+  <meta name="description" content="Rigcam FAQ: using your iPhone as a camera on its own or linked to Rigdesk, pairing, recording, privacy and troubleshooting." />
+  <link rel="canonical" href="https://jbeck22.github.io/rigkit/rigcam-faq.html" />
+  <meta name="theme-color" content="#06090D" />
+  <link rel="icon" type="image/png" href="faq-assets/rigcam-icon.png" />
+  <style>
+    :root { color-scheme: light dark;
+      --bg:#FFFFFF; --text:#1C1C1E; --muted:#6B6B73; --card:#F5F5F7; --line:#E2E2E6; --link:#0B84A5; --cyan:#0B84A5; --red:#E0202B; --chip:#FFFFFF;
+      --ink:#06090D; --panel:#0C1319; --panelhi:#121C24; --hline:#17303B; --hcyan:#1CE3F7; --hred:#FF333D; --hmuted:#8A99A8; }
+    @media (prefers-color-scheme: dark) { :root { --bg:#0B0F14; --text:#F2F2F7; --muted:#8A99A8; --card:#0C1319; --line:#17303B; --link:#5ED3F3; --cyan:#1CE3F7; --red:#FF333D; --chip:#121C24; } }
+    * { box-sizing: border-box; }
+    body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; line-height:1.6; color:var(--text); background:var(--bg); margin:0; -webkit-font-smoothing:antialiased; }
+    a { color:var(--link); overflow-wrap:anywhere; }
+    .hero { background: radial-gradient(900px 300px at 85% -20%, rgba(28,227,247,.16), transparent 60%), linear-gradient(180deg,var(--panel),var(--ink)); border-bottom:1px solid var(--hline); color:#fff; }
+    .hero .inner { max-width:860px; margin:0 auto; padding:28px 24px 34px; }
+    .topbar { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:28px; font-size:13px; flex-wrap:wrap; }
+    .topbar a { color:var(--hmuted); text-decoration:none; font-weight:600; letter-spacing:.04em; }
+    .topbar a:hover { color:var(--hcyan); }
+    .topbar nav { display:flex; gap:18px; flex-wrap:wrap; }
+    .titlerow { display:flex; gap:18px; align-items:center; }
+    .titlerow img { width:76px; height:76px; border-radius:22%; border:1px solid var(--hline); box-shadow:0 0 28px rgba(28,227,247,.22); flex:none; }
+    .label { font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--hmuted); }
+    .live { display:inline-flex; align-items:center; gap:7px; color:var(--hred); font-weight:700; }
+    .live::before { content:""; width:9px; height:9px; border-radius:50%; background:var(--hred); box-shadow:0 0 10px var(--hred); }
+    h1 { font-size:36px; letter-spacing:-.5px; margin:4px 0 0; line-height:1.15; }
+    .lead { color:#B7C2CC; font-size:17px; margin:18px 0 20px; max-width:60ch; }
+    .chips { display:flex; flex-wrap:wrap; gap:8px; margin:0; padding:0; list-style:none; }
+    .chips a { display:inline-block; padding:8px 16px; border-radius:999px; border:1px solid #4D5C6B; background:rgba(18,28,36,.5); color:#fff; font-weight:600; font-size:14px; text-decoration:none; }
+    .chips a:hover { border-color:var(--hcyan); color:var(--hcyan); }
+    main { max-width:860px; margin:0 auto; padding:40px 24px 24px; }
+    .group { margin:0 0 40px; scroll-margin-top:16px; }
+    .group > h2 { font-size:12px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--cyan); margin:0 0 14px; padding-bottom:10px; border-bottom:1px solid var(--line); }
+    .q { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 22px; margin:0 0 12px; scroll-margin-top:16px; }
+    .q:target { border-color:var(--cyan); box-shadow:0 0 0 3px rgba(28,227,247,.18); }
+    .q h3 { font-size:18px; line-height:1.35; margin:0 0 8px; letter-spacing:-.1px; }
+    .q h3 a.anchor { color:var(--cyan); text-decoration:none; margin-left:8px; opacity:0; font-weight:400; }
+    .q h3:hover a.anchor, .q h3 a.anchor:focus { opacity:1; }
+    .q p, .q li { font-size:16px; margin:0 0 10px; }
+    .q li { margin-bottom:6px; }
+    .q > :last-child { margin-bottom:0; }
+    .q ul { padding-left:22px; margin:0 0 10px; }
+    .q ol { list-style:none; counter-reset:step; padding:0; margin:0 0 12px; }
+    .q ol li { counter-increment:step; position:relative; padding-left:42px; min-height:30px; margin-bottom:10px; }
+    .q ol li::before { content:counter(step); position:absolute; left:0; top:0; width:30px; height:34px; display:flex; align-items:center; justify-content:center; border-radius:8px; background:var(--chip); border:1px solid var(--line); color:var(--cyan); font:600 15px ui-monospace,SFMono-Regular,Menlo,monospace; }
+    .q code { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.9em; background:var(--chip); border:1px solid var(--line); padding:1px 6px; border-radius:6px; }
+    footer { max-width:860px; margin:0 auto; padding:20px 24px 56px; color:var(--muted); font-size:13px; }
+    footer .rule { border-top:1px solid var(--line); padding-top:20px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+    @media (max-width:560px) { h1 { font-size:28px; } .titlerow img { width:60px; height:60px; } .hero .inner { padding:20px 18px 26px; } main { padding:28px 16px 12px; } .q { padding:16px 16px; } .lead { font-size:16px; } footer { padding: 16px 16px 40px; } }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="inner">
+      <div class="topbar">
+        <a href="index.html">&larr; RIGKIT SUPPORT</a>
+        <nav><a href="rigdesk-faq.html">RIGDESK FAQ</a><a href="privacy-policy.html">PRIVACY</a></nav>
+      </div>
+      <div class="titlerow">
+        <img src="faq-assets/rigcam-icon.png" alt="Rigcam app icon" width="76" height="76" />
+        <div>
+          <div class="label"><span class="live">REC</span> &nbsp;&middot;&nbsp; Frequently asked questions</div>
+          <h1>Rigcam FAQ</h1>
+        </div>
+      </div>
+      <p class="lead">Answers for using Rigcam on its own as a manual video camera, and linked to Rigdesk as part of a multi-camera shoot.</p>
+      <ul class="chips" aria-label="Jump to a section"><li><a href="#getting-started">Getting started</a></li><li><a href="#recording-on-its-own">Recording on its own</a></li><li><a href="#linking-to-rigdesk">Linking to Rigdesk</a></li><li><a href="#purchases">Purchases</a></li><li><a href="#privacy">Privacy</a></li><li><a href="#troubleshooting">Troubleshooting</a></li></ul>
+    </div>
+  </header>
+
+  <main>
+<section class="group" id="getting-started"><h2>Getting started</h2>
+<article class="q" id="what-is-rigcam"><h3>What is Rigcam?<a class="anchor" href="#what-is-rigcam" aria-label="Link to this question">#</a></h3>
+<p>Rigcam turns an iPhone into a camera for multi-camera shoots. You can use it on its own as a manual video camera, or link it to <strong>Rigdesk</strong> on an iPad (or another iPhone) so one person can watch, switch and control every camera.</p>
+</article>
+<article class="q" id="what-do-i-need"><h3>What do I need?<a class="anchor" href="#what-do-i-need" aria-label="Link to this question">#</a></h3>
+<p>An iPhone on iOS 26 or later. To direct several phones, you also need Rigdesk, a separate free app, on an iPad or iPhone. No account is needed.</p>
+</article>
+<article class="q" id="what-permissions-does-rigcam-ask-for-and-why"><h3>What permissions does Rigcam ask for, and why?<a class="anchor" href="#what-permissions-does-rigcam-ask-for-and-why" aria-label="Link to this question">#</a></h3>
+<ul>
+<li><strong>Camera:</strong> to record video and send a live preview to your director.</li>
+<li><strong>Microphone:</strong> to record sound. If you skip it, Rigcam still records video and shows "No audio: microphone access is off".</li>
+<li><strong>Local Network:</strong> asked the first time you tap <strong>Connect to a director</strong>, not at launch. Without it, Rigcam can't find the iPad.</li>
+<li><strong>Photos (add only):</strong> only when you tap to save a take to Photos.</li>
+</ul>
+</article>
+<article class="q" id="i-turned-off-camera-access-how-do-i-fix-it"><h3>I turned off camera access. How do I fix it?<a class="anchor" href="#i-turned-off-camera-access-how-do-i-fix-it" aria-label="Link to this question">#</a></h3>
+<p>Rigcam shows "Camera access is off" with an <strong>Open Settings</strong> button. Tap it and turn <strong>Camera</strong> on for Rigcam.</p>
+</article></section>
+<section class="group" id="recording-on-its-own"><h2>Recording on its own</h2>
+<article class="q" id="can-i-use-rigcam-without-an-ipad"><h3>Can I use Rigcam without an iPad?<a class="anchor" href="#can-i-use-rigcam-without-an-ipad" aria-label="Link to this question">#</a></h3>
+<p>Yes. Unlinked, the screen says <strong>SOLO</strong>. Tap the big record button to start and stop. Pick the resolution and frame rate in <strong>Settings</strong> (the gear button) under <strong>Recording</strong>.</p>
+</article>
+<article class="q" id="what-can-i-adjust-while-shooting"><h3>What can I adjust while shooting?<a class="anchor" href="#what-can-i-adjust-while-shooting" aria-label="Link to this question">#</a></h3>
+<ul>
+<li><strong>Shoot:</strong> opens the controls for <strong>Exposure</strong>, <strong>Focus</strong>, <strong>White Balance</strong> and <strong>Tint</strong>. Tap a readout at the top to adjust it, use <strong>Auto</strong> to hand it back to the camera, or <strong>Reset</strong>.</li>
+<li><strong>Lens bar:</strong> tap a zoom chip to change lens or zoom.</li>
+<li><strong>Switch camera</strong> (circular arrows): flip between front and back.</li>
+<li><strong>Guides:</strong> turns on the framing grid. There's also a level indicator.</li>
+<li><strong>Take photo</strong> (camera icon): takes a still without stopping.</li>
+<li>The top panel shows left and right audio meters, the format (for example 4K30 HEVC) and free storage.</li>
+</ul>
+</article>
+<article class="q" id="where-are-my-takes-and-photos"><h3>Where are my takes and photos?<a class="anchor" href="#where-are-my-takes-and-photos" aria-label="Link to this question">#</a></h3>
+<p>Open <strong>Settings &gt; Takes and photos on this iPhone</strong>. Each item can be shared, saved to Photos or deleted. They're also in the <strong>Files</strong> app under <strong>On My iPhone &gt; Rigcam</strong>. They stay on the phone until you delete them.</p>
+</article></section>
+<section class="group" id="linking-to-rigdesk"><h2>Linking to Rigdesk</h2>
+<article class="q" id="how-do-i-connect-rigcam-to-rigdesk"><h3>How do I connect Rigcam to Rigdesk?<a class="anchor" href="#how-do-i-connect-rigcam-to-rigdesk" aria-label="Link to this question">#</a></h3>
+<ol>
+<li>On the iPad, open Rigdesk, name a session and tap <strong>New session</strong>.</li>
+<li>On the iPhone, tap the connect button (the antenna icon) or <strong>Connect to a director</strong>, then pick the iPad from <strong>Nearby Rigdesk</strong>.</li>
+<li>A six-digit code appears on both screens. Check that they match, then tap <strong>Codes match</strong> on the iPhone and <strong>Accept</strong> on the iPad.</li>
+</ol>
+<p>After that, the phone reconnects on its own as a trusted camera.</p>
+</article>
+<article class="q" id="do-the-phones-need-to-be-on-the-same-wi-fi-network"><h3>Do the phones need to be on the same Wi-Fi network?<a class="anchor" href="#do-the-phones-need-to-be-on-the-same-wi-fi-network" aria-label="Link to this question">#</a></h3>
+<p>No. Rigcam talks directly to the iPad. Keep <strong>Wi-Fi and Bluetooth on</strong> and <strong>Personal Hotspot off</strong> on every device. Stay within about 10 m (33 ft), in line of sight.</p>
+</article>
+<article class="q" id="what-does-the-director-control"><h3>What does the director control?<a class="anchor" href="#what-does-the-director-control" aria-label="Link to this question">#</a></h3>
+<p>The director sees your picture live and can set focus, exposure, white balance and zoom, switch lenses or flip to the front camera, turn the light on and off, take photos, and start and stop recording. When your camera is the one on air, Rigcam shows a red <strong>ON AIR</strong> border. If the director locks the controls, you'll see "Controls locked by the director".</p>
+</article>
+<article class="q" id="can-i-start-recording-from-the-phone-during-a-session"><h3>Can I start recording from the phone during a session?<a class="anchor" href="#can-i-start-recording-from-the-phone-during-a-session" aria-label="Link to this question">#</a></h3>
+<p>Only if the director allows it. In <strong>Settings</strong>, <strong>Record button</strong> shows either <strong>Starts all cameras</strong> or <strong>Director only</strong>. With <strong>Director only</strong>, the phone shows "In this session only the director starts and stops recording."</p>
+</article>
+<article class="q" id="the-session-is-landscape-but-im-holding-the-phone-upright-or-the-other"><h3>The session is landscape but I'm holding the phone upright (or the other way around).<a class="anchor" href="#the-session-is-landscape-but-im-holding-the-phone-upright-or-the-other" aria-label="Link to this question">#</a></h3>
+<p>Rigcam shows "This session is landscape. Turn the phone to match." (or portrait). The take is always recorded the way you're actually holding the phone.</p>
+</article>
+<article class="q" id="what-happens-to-my-clip-after-a-take"><h3>What happens to my clip after a take?<a class="anchor" href="#what-happens-to-my-clip-after-a-take" aria-label="Link to this question">#</a></h3>
+<p>The full-quality file records on the phone. After you stop, it copies to the iPad and is checked for errors. In <strong>Takes and photos</strong>, each file shows <strong>waiting to copy</strong>, <strong>copying to the director…</strong> or <strong>copied to the director</strong>. The phone keeps its copy until you delete it.</p>
+</article>
+<article class="q" id="what-if-the-connection-drops-while-recording"><h3>What if the connection drops while recording?<a class="anchor" href="#what-if-the-connection-drops-while-recording" aria-label="Link to this question">#</a></h3>
+<p>Recording carries on, on the phone. When the link comes back, the phone reconnects and the copy resumes.</p>
+</article>
+<article class="q" id="how-do-i-connect-to-a-different-ipad-or-forget-one"><h3>How do I connect to a different iPad, or forget one?<a class="anchor" href="#how-do-i-connect-to-a-different-ipad-or-forget-one" aria-label="Link to this question">#</a></h3>
+<p>Open <strong>Settings</strong>. Under <strong>Director</strong>, tap <strong>Connect to a different director</strong> or <strong>Forget this director</strong>.</p>
+</article>
+<article class="q" id="how-do-i-rename-my-camera"><h3>How do I rename my camera?<a class="anchor" href="#how-do-i-rename-my-camera" aria-label="Link to this question">#</a></h3>
+<p><strong>Settings &gt; Camera name.</strong> The director sees the new name the next time the phone connects.</p>
+</article>
+<article class="q" id="can-i-keep-the-screen-from-going-to-sleep"><h3>Can I keep the screen from going to sleep?<a class="anchor" href="#can-i-keep-the-screen-from-going-to-sleep" aria-label="Link to this question">#</a></h3>
+<p>Yes. <strong>Settings &gt; Keep the screen awake in a session</strong> is on by default.</p>
+</article></section>
+<section class="group" id="purchases"><h2>Purchases</h2>
+<article class="q" id="is-rigcam-free"><h3>Is Rigcam free?<a class="anchor" href="#is-rigcam-free" aria-label="Link to this question">#</a></h3>
+<p>Yes. Rigcam is free with no purchases inside. The optional upgrade, <strong>RigKit Pro</strong>, is bought in <strong>Rigdesk</strong>, and it covers the whole rig, including every Rigcam phone linked to it. See the <a href="rigdesk-faq.html">Rigdesk FAQ</a> for prices, trials, restore and cancelling.</p>
+</article></section>
+<section class="group" id="privacy"><h2>Privacy</h2>
+<article class="q" id="does-rigcam-need-an-account-does-it-track-me"><h3>Does Rigcam need an account? Does it track me?<a class="anchor" href="#does-rigcam-need-an-account-does-it-track-me" aria-label="Link to this question">#</a></h3>
+<p>No account, no ads, no tracking. Your video, audio and photos stay on your devices. Linked to Rigdesk, the preview and clips go directly from the phone to your iPad, encrypted, and never to us. Rigcam sends nothing to us or to RevenueCat.</p>
+</article></section>
+<section class="group" id="troubleshooting"><h2>Troubleshooting</h2>
+<article class="q" id="rigcam-cant-find-my-ipad"><h3>Rigcam can't find my iPad.<a class="anchor" href="#rigcam-cant-find-my-ipad" aria-label="Link to this question">#</a></h3>
+<ul>
+<li>Make sure Rigdesk is open, in front, with a session started.</li>
+<li>Turn on Wi-Fi and Bluetooth on both devices, and turn off Personal Hotspot.</li>
+<li>Check <strong>Settings &gt; Privacy &amp; Security &gt; Local Network</strong> and make sure Rigcam (and Rigdesk) are on.</li>
+<li>Move closer, within about 10 m.</li>
+<li>Tap the refresh button in <strong>Connect to a director</strong> to search again. It also re-searches every few seconds on its own.</li>
+</ul>
+</article>
+<article class="q" id="the-pairing-code-doesnt-appear-or-pairing-fails"><h3>The pairing code doesn't appear, or pairing fails.<a class="anchor" href="#the-pairing-code-doesnt-appear-or-pairing-fails" aria-label="Link to this question">#</a></h3>
+<p>Wait for the code. <strong>Codes match</strong> stays disabled until it appears. If you see "Pairing didn't complete. Try again.", tap <strong>Cancel</strong> and connect again. If the iPad says "This iPad's identity changed", forget the director in Settings and pair again.</p>
+</article>
+<article class="q" id="i-see-no-audio-microphone-access-is-off"><h3>I see "No audio: microphone access is off".<a class="anchor" href="#i-see-no-audio-microphone-access-is-off" aria-label="Link to this question">#</a></h3>
+<p>Turn on <strong>Microphone</strong> for Rigcam in the iPhone's Settings app. Video still records without it.</p>
+</article>
+<article class="q" id="recording-stopped-by-itself-and-said-storage-is-almost-full"><h3>Recording stopped by itself and said storage is almost full.<a class="anchor" href="#recording-stopped-by-itself-and-said-storage-is-almost-full" aria-label="Link to this question">#</a></h3>
+<p>Rigcam stops a take when the phone is almost out of space. Free up space, or delete takes that have already copied (they show <strong>copied to the director</strong>).</p>
+</article>
+<article class="q" id="how-do-i-contact-support"><h3>How do I contact support?<a class="anchor" href="#how-do-i-contact-support" aria-label="Link to this question">#</a></h3>
+<p>Email <strong>jeramey.<a href="mailto:beck@gmail.com">beck@gmail.com</a></strong>. Support page: <a href="https://jbeck22.github.io/rigkit/">https://jbeck22.github.io/rigkit/</a></p>
+</article></section>
+  </main>
+
+  <footer><div class="rule"><span>Rigcam and Rigdesk are made by Jeramey Beck.</span><span><a href="index.html">Support</a> &middot; <a href="privacy-policy.html">Privacy Policy</a></span></div></footer>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rigdesk FAQ | Rigcam and Rigdesk</title>
+  <meta name="description" content="Rigdesk FAQ: directing linked Rigcam iPhones from an iPad or iPhone, sessions, recording, RigKit Pro, privacy and troubleshooting." />
+  <link rel="canonical" href="https://jbeck22.github.io/rigkit/rigdesk-faq.html" />
+  <meta name="theme-color" content="#06090D" />
+  <link rel="icon" type="image/png" href="faq-assets/rigdesk-icon.png" />
+  <style>
+    :root { color-scheme: light dark;
+      --bg:#FFFFFF; --text:#1C1C1E; --muted:#6B6B73; --card:#F5F5F7; --line:#E2E2E6; --link:#0B84A5; --cyan:#0B84A5; --red:#E0202B; --chip:#FFFFFF;
+      --ink:#06090D; --panel:#0C1319; --panelhi:#121C24; --hline:#17303B; --hcyan:#1CE3F7; --hred:#FF333D; --hmuted:#8A99A8; }
+    @media (prefers-color-scheme: dark) { :root { --bg:#0B0F14; --text:#F2F2F7; --muted:#8A99A8; --card:#0C1319; --line:#17303B; --link:#5ED3F3; --cyan:#1CE3F7; --red:#FF333D; --chip:#121C24; } }
+    * { box-sizing: border-box; }
+    body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; line-height:1.6; color:var(--text); background:var(--bg); margin:0; -webkit-font-smoothing:antialiased; }
+    a { color:var(--link); overflow-wrap:anywhere; }
+    .hero { background: radial-gradient(900px 300px at 85% -20%, rgba(28,227,247,.16), transparent 60%), linear-gradient(180deg,var(--panel),var(--ink)); border-bottom:1px solid var(--hline); color:#fff; }
+    .hero .inner { max-width:860px; margin:0 auto; padding:28px 24px 34px; }
+    .topbar { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:28px; font-size:13px; flex-wrap:wrap; }
+    .topbar a { color:var(--hmuted); text-decoration:none; font-weight:600; letter-spacing:.04em; }
+    .topbar a:hover { color:var(--hcyan); }
+    .topbar nav { display:flex; gap:18px; flex-wrap:wrap; }
+    .titlerow { display:flex; gap:18px; align-items:center; }
+    .titlerow img { width:76px; height:76px; border-radius:22%; border:1px solid var(--hline); box-shadow:0 0 28px rgba(28,227,247,.22); flex:none; }
+    .label { font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--hmuted); }
+    .live { display:inline-flex; align-items:center; gap:7px; color:var(--hred); font-weight:700; }
+    .live::before { content:""; width:9px; height:9px; border-radius:50%; background:var(--hred); box-shadow:0 0 10px var(--hred); }
+    h1 { font-size:36px; letter-spacing:-.5px; margin:4px 0 0; line-height:1.15; }
+    .lead { color:#B7C2CC; font-size:17px; margin:18px 0 20px; max-width:60ch; }
+    .chips { display:flex; flex-wrap:wrap; gap:8px; margin:0; padding:0; list-style:none; }
+    .chips a { display:inline-block; padding:8px 16px; border-radius:999px; border:1px solid #4D5C6B; background:rgba(18,28,36,.5); color:#fff; font-weight:600; font-size:14px; text-decoration:none; }
+    .chips a:hover { border-color:var(--hcyan); color:var(--hcyan); }
+    main { max-width:860px; margin:0 auto; padding:40px 24px 24px; }
+    .group { margin:0 0 40px; scroll-margin-top:16px; }
+    .group > h2 { font-size:12px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--cyan); margin:0 0 14px; padding-bottom:10px; border-bottom:1px solid var(--line); }
+    .q { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 22px; margin:0 0 12px; scroll-margin-top:16px; }
+    .q:target { border-color:var(--cyan); box-shadow:0 0 0 3px rgba(28,227,247,.18); }
+    .q h3 { font-size:18px; line-height:1.35; margin:0 0 8px; letter-spacing:-.1px; }
+    .q h3 a.anchor { color:var(--cyan); text-decoration:none; margin-left:8px; opacity:0; font-weight:400; }
+    .q h3:hover a.anchor, .q h3 a.anchor:focus { opacity:1; }
+    .q p, .q li { font-size:16px; margin:0 0 10px; }
+    .q li { margin-bottom:6px; }
+    .q > :last-child { margin-bottom:0; }
+    .q ul { padding-left:22px; margin:0 0 10px; }
+    .q ol { list-style:none; counter-reset:step; padding:0; margin:0 0 12px; }
+    .q ol li { counter-increment:step; position:relative; padding-left:42px; min-height:30px; margin-bottom:10px; }
+    .q ol li::before { content:counter(step); position:absolute; left:0; top:0; width:30px; height:34px; display:flex; align-items:center; justify-content:center; border-radius:8px; background:var(--chip); border:1px solid var(--line); color:var(--cyan); font:600 15px ui-monospace,SFMono-Regular,Menlo,monospace; }
+    .q code { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.9em; background:var(--chip); border:1px solid var(--line); padding:1px 6px; border-radius:6px; }
+    footer { max-width:860px; margin:0 auto; padding:20px 24px 56px; color:var(--muted); font-size:13px; }
+    footer .rule { border-top:1px solid var(--line); padding-top:20px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+    @media (max-width:560px) { h1 { font-size:28px; } .titlerow img { width:60px; height:60px; } .hero .inner { padding:20px 18px 26px; } main { padding:28px 16px 12px; } .q { padding:16px 16px; } .lead { font-size:16px; } footer { padding: 16px 16px 40px; } }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="inner">
+      <div class="topbar">
+        <a href="index.html">&larr; RIGKIT SUPPORT</a>
+        <nav><a href="rigcam-faq.html">RIGCAM FAQ</a><a href="privacy-policy.html">PRIVACY</a></nav>
+      </div>
+      <div class="titlerow">
+        <img src="faq-assets/rigdesk-icon.png" alt="Rigdesk app icon" width="76" height="76" />
+        <div>
+          <div class="label"><span class="live">ON AIR</span> &nbsp;&middot;&nbsp; Frequently asked questions</div>
+          <h1>Rigdesk FAQ</h1>
+        </div>
+      </div>
+      <p class="lead">Answers for directing your cameras with Rigdesk: sessions, switching, recording, takes and files, RigKit Pro, privacy and troubleshooting.</p>
+      <ul class="chips" aria-label="Jump to a section"><li><a href="#getting-started">Getting started</a></li><li><a href="#directing">Directing</a></li><li><a href="#takes-and-files">Takes and files</a></li><li><a href="#purchases-rigkit-pro">Purchases (RigKit Pro)</a></li><li><a href="#privacy">Privacy</a></li><li><a href="#troubleshooting">Troubleshooting</a></li></ul>
+    </div>
+  </header>
+
+  <main>
+<section class="group" id="getting-started"><h2>Getting started</h2>
+<article class="q" id="what-is-rigdesk"><h3>What is Rigdesk?<a class="anchor" href="#what-is-rigdesk" aria-label="Link to this question">#</a></h3>
+<p>Rigdesk is the director's desk for a multi-camera shoot. Link iPhones running the free <strong>Rigcam</strong> app, see every camera live, choose which one is on air, control each camera, and start and stop them all together. After each take, the full-quality clips copy to your iPad.</p>
+</article>
+<article class="q" id="what-do-i-need"><h3>What do I need?<a class="anchor" href="#what-do-i-need" aria-label="Link to this question">#</a></h3>
+<p>An iPad or iPhone on iOS 26 or later running Rigdesk, plus one or more iPhones running Rigcam. Rigdesk has a compact layout for iPhone. No account is needed.</p>
+</article>
+<article class="q" id="how-many-cameras-can-i-use"><h3>How many cameras can I use?<a class="anchor" href="#how-many-cameras-can-i-use" aria-label="Link to this question">#</a></h3>
+<p>Two on the free version, and up to four with <strong>RigKit Pro</strong>. If you add a third camera on the free version, Rigdesk says "The free version links 2 cameras. RigKit Pro links 4."</p>
+</article>
+<article class="q" id="how-do-i-start-a-session"><h3>How do I start a session?<a class="anchor" href="#how-do-i-start-a-session" aria-label="Link to this question">#</a></h3>
+<p>The first time, Rigdesk asks for Local Network access and lets you set the name phones will see. On the home screen, type a name under <strong>Session</strong> and tap <strong>New session</strong>.</p>
+</article>
+<article class="q" id="how-do-i-add-cameras"><h3>How do I add cameras?<a class="anchor" href="#how-do-i-add-cameras" aria-label="Link to this question">#</a></h3>
+<ol>
+<li>In the session, tap <strong>+</strong> (<strong>Add cameras</strong>), or tap an empty camera tile.</li>
+<li>On each iPhone, open Rigcam, tap the connect button and pick this iPad.</li>
+<li>The phone appears under <strong>Nearby Rigcam Phones</strong> with a six-digit code. Check that it matches the phone's code, then tap <strong>Accept</strong> (or <strong>Reject</strong>).</li>
+</ol>
+<p>Paired phones are listed under <strong>Known devices</strong> and reconnect on their own next time.</p>
+</article></section>
+<section class="group" id="directing"><h2>Directing</h2>
+<article class="q" id="how-do-i-switch-which-camera-is-on-air"><h3>How do I switch which camera is on air?<a class="anchor" href="#how-do-i-switch-which-camera-is-on-air" aria-label="Link to this question">#</a></h3>
+<p><strong>Tap</strong> a camera tile to put it on air. Its border turns red and the phone shows <strong>ON AIR</strong>. To adjust a camera without putting it on air, <strong>touch and hold</strong> its tile. The selected camera has a blue border.</p>
+</article>
+<article class="q" id="how-do-i-record"><h3>How do I record?<a class="anchor" href="#how-do-i-record" aria-label="Link to this question">#</a></h3>
+<p>Tap the record button to start every camera together on a shared clock, and tap it again to stop. By default, only the iPad starts and stops recording. To let a phone start or stop the take too, open <strong>Session format</strong> (the gear) and choose <strong>A camera may also request a start or stop</strong>.</p>
+</article>
+<article class="q" id="what-can-i-control-on-each-camera"><h3>What can I control on each camera?<a class="anchor" href="#what-can-i-control-on-each-camera" aria-label="Link to this question">#</a></h3>
+<p>With a camera selected, the bottom bar lets you:</p>
+<ul>
+<li>Adjust <strong>Exposure</strong>, <strong>Focus</strong> and <strong>White Balance</strong>, each with <strong>Auto</strong> and <strong>Reset</strong>.</li>
+<li><strong>Zoom</strong> and switch lenses.</li>
+<li><strong>Take photo</strong> on that camera.</li>
+<li>Switch between the front and back cameras.</li>
+</ul>
+<p>The <strong>More controls</strong> (…) menu has <strong>Photo on every camera</strong>, <strong>Tint</strong>, <strong>Light on/off</strong>, <strong>Identify this camera</strong> and <strong>Show/Hide guides</strong>.</p>
+<p>To pick a different camera, use the <strong>Selected</strong> menu or touch and hold its tile.</p>
+</article>
+<article class="q" id="how-do-i-set-resolution-frame-rate-and-codec"><h3>How do I set resolution, frame rate and codec?<a class="anchor" href="#how-do-i-set-resolution-frame-rate-and-codec" aria-label="Link to this question">#</a></h3>
+<p>Tap the gear (<strong>Session format</strong>). Choose:</p>
+<ul>
+<li><strong>Resolution:</strong> 1080p, 4K or 4K DCI</li>
+<li><strong>Orientation:</strong> Landscape or Portrait</li>
+<li><strong>Frame rate:</strong> 24, 25, 30 or 60</li>
+<li><strong>Codec:</strong> HEVC, or ProRes LT and ProRes 422 (Pro)</li>
+<li><strong>Color:</strong> Rec. 709, or HLG (Pro)</li>
+</ul>
+<p>Every camera uses this format when it can. A camera that can't joins with its closest option and shows a format badge on its tile. You can't change the format while recording.</p>
+</article>
+<article class="q" id="why-does-the-live-picture-look-softer-than-my-recording"><h3>Why does the live picture look softer than my recording?<a class="anchor" href="#why-does-the-live-picture-look-softer-than-my-recording" aria-label="Link to this question">#</a></h3>
+<p>The grid shows a lower-resolution preview so switching stays quick. The full-quality masters copy to the iPad after you stop the take.</p>
+</article>
+<article class="q" id="what-do-the-badges-on-each-tile-mean"><h3>What do the badges on each tile mean?<a class="anchor" href="#what-do-the-badges-on-each-tile-mean" aria-label="Link to this question">#</a></h3>
+<p>Each tile shows the camera's slot and name (for example <strong>CAM 1 · Jeramey's iPhone</strong>), link strength, battery and recording status. <strong>Hot</strong> means the phone is running hot. A format badge means that camera records a different format from the session. <strong>Reconnecting…</strong> or <strong>Not connected</strong> means the link dropped.</p>
+</article>
+<article class="q" id="how-do-i-end-a-session"><h3>How do I end a session?<a class="anchor" href="#how-do-i-end-a-session" aria-label="Link to this question">#</a></h3>
+<p>Tap the back arrow (<strong>End session</strong>) and confirm. The phones are released. Clips that already copied stay on the iPad.</p>
+</article></section>
+<section class="group" id="takes-and-files"><h2>Takes and files</h2>
+<article class="q" id="where-are-my-clips"><h3>Where are my clips?<a class="anchor" href="#where-are-my-clips" aria-label="Link to this question">#</a></h3>
+<p>Tap the stack icon (<strong>Takes and photos</strong>). Each take lists every camera's clip with its copy progress (<strong>waiting for the phone</strong>, <strong>copying</strong>, <strong>copied</strong>). Tap a file to preview it, or use <strong>Share</strong> or <strong>Save to Photos</strong>. You can also use <strong>Share all</strong> or <strong>Save all to Photos</strong>. The files are also in the <strong>Files</strong> app under <strong>On My iPad &gt; Rigdesk</strong> (or <strong>On My iPhone &gt; Rigdesk</strong>) in a folder named after the session.</p>
+</article>
+<article class="q" id="what-is-the-switched-video"><h3>What is the switched video?<a class="anchor" href="#what-is-the-switched-video" aria-label="Link to this question">#</a></h3>
+<p>With <strong>RigKit Pro</strong>, Rigdesk builds one video for each take that follows the camera switches you made while recording. It appears at the top of the take as <strong>Switched video</strong> once every camera's clip has copied. If it fails, tap <strong>Try again</strong>. On the free version, the take shows <strong>Switched video · RigKit Pro</strong>.</p>
+</article>
+<article class="q" id="how-do-i-see-an-earlier-session"><h3>How do I see an earlier session?<a class="anchor" href="#how-do-i-see-an-earlier-session" aria-label="Link to this question">#</a></h3>
+<p>On the home screen under <strong>Recent sessions</strong>, tap a session to see its clips and photos, save them to Photos or delete the session.</p>
+</article>
+<article class="q" id="how-do-i-delete-a-session"><h3>How do I delete a session?<a class="anchor" href="#how-do-i-delete-a-session" aria-label="Link to this question">#</a></h3>
+<p>Open the session from <strong>Recent sessions</strong> and tap <strong>Delete session and its clips</strong>, then confirm. This removes the files from this device only and can't be undone.</p>
+</article></section>
+<section class="group" id="purchases-rigkit-pro"><h2>Purchases (RigKit Pro)</h2>
+<article class="q" id="what-does-rigkit-pro-add"><h3>What does RigKit Pro add?<a class="anchor" href="#what-does-rigkit-pro-add" aria-label="Link to this question">#</a></h3>
+<p>Up to four cameras in a session, ProRes recording, HDR (HLG) recording, and a switched video made from every take. The free version has two cameras, no watermark and no time limit.</p>
+</article>
+<article class="q" id="how-do-i-buy-it"><h3>How do I buy it?<a class="anchor" href="#how-do-i-buy-it" aria-label="Link to this question">#</a></h3>
+<p>On the Rigdesk home screen, tap <strong>RigKit Pro: four cameras, ProRes, HDR</strong>, then pick a plan. Pro-only choices in Session format also open this screen.</p>
+</article>
+<article class="q" id="do-i-need-to-buy-pro-on-every-phone"><h3>Do I need to buy Pro on every phone?<a class="anchor" href="#do-i-need-to-buy-pro-on-every-phone" aria-label="Link to this question">#</a></h3>
+<p>No. Rigcam is always free. You buy Pro once in Rigdesk, and it covers every camera linked to that Rigdesk. One purchase covers every device on your Apple Account.</p>
+</article>
+<article class="q" id="does-family-sharing-work"><h3>Does Family Sharing work?<a class="anchor" href="#does-family-sharing-work" aria-label="Link to this question">#</a></h3>
+<p>Yes. RigKit Pro supports Family Sharing, so family members in your Family Sharing group can use it too.</p>
+</article>
+<article class="q" id="i-bought-pro-but-it-isnt-active"><h3>I bought Pro but it isn't active.<a class="anchor" href="#i-bought-pro-but-it-isnt-active" aria-label="Link to this question">#</a></h3>
+<p>Open the RigKit Pro screen and tap <strong>Restore purchases</strong>. When Pro is active, the screen says "Pro is active on this Apple Account. Thank you." If no purchase is found, make sure you're signed in with the Apple Account you bought it with.</p>
+</article>
+<article class="q" id="how-do-i-cancel"><h3>How do I cancel?<a class="anchor" href="#how-do-i-cancel" aria-label="Link to this question">#</a></h3>
+<p>Monthly and yearly plans renew automatically until you cancel. Cancel in your iPhone or iPad <strong>Settings &gt; [your name] &gt; Subscriptions</strong> at least a day before the period ends. The Lifetime purchase never renews.</p>
+</article></section>
+<section class="group" id="privacy"><h2>Privacy</h2>
+<article class="q" id="does-rigdesk-collect-my-video"><h3>Does Rigdesk collect my video?<a class="anchor" href="#does-rigdesk-collect-my-video" aria-label="Link to this question">#</a></h3>
+<p>No. There's no account, no ads and no tracking. Video goes only between your own devices, encrypted, and never to us. If you buy RigKit Pro, Apple processes the payment, and RevenueCat receives a random app user ID and your purchase status so Rigdesk knows Pro is active.</p>
+</article></section>
+<section class="group" id="troubleshooting"><h2>Troubleshooting</h2>
+<article class="q" id="a-phone-doesnt-show-up"><h3>A phone doesn't show up.<a class="anchor" href="#a-phone-doesnt-show-up" aria-label="Link to this question">#</a></h3>
+<p>In <strong>Add cameras</strong>, tap <strong>Can't find your phone?</strong>:</p>
+<ul>
+<li>Rigcam must be open and in front on the phone.</li>
+<li>Turn on Wi-Fi and Bluetooth on both devices, and turn off Personal Hotspot.</li>
+<li>Both apps need <strong>Local Network</strong> access in <strong>Settings &gt; Privacy &amp; Security &gt; Local Network</strong>.</li>
+<li>Stay within about 10 m (33 ft).</li>
+</ul>
+<p>Then tap <strong>Restart discovery</strong>. The phones don't need to be on the same Wi-Fi network as the iPad.</p>
+</article>
+<article class="q" id="not-enough-space-on-this-device"><h3>"Not enough space on this device".<a class="anchor" href="#not-enough-space-on-this-device" aria-label="Link to this question">#</a></h3>
+<p>The iPad didn't have room for that clip, so it stays on the phone. Free up space on the iPad. The clip is still in Rigcam on that phone.</p>
+</article>
+<article class="q" id="stop-recording-before-changing-the-format"><h3>"Stop recording before changing the format."<a class="anchor" href="#stop-recording-before-changing-the-format" aria-label="Link to this question">#</a></h3>
+<p>The session format can't change during a take. Stop recording, then open <strong>Session format</strong>.</p>
+</article>
+<article class="q" id="the-prices-didnt-load-on-the-rigkit-pro-screen"><h3>The prices didn't load on the RigKit Pro screen.<a class="anchor" href="#the-prices-didnt-load-on-the-rigkit-pro-screen" aria-label="Link to this question">#</a></h3>
+<p>Check your internet connection and tap <strong>Try again</strong>.</p>
+</article>
+<article class="q" id="how-do-i-contact-support"><h3>How do I contact support?<a class="anchor" href="#how-do-i-contact-support" aria-label="Link to this question">#</a></h3>
+<p>Email <strong>jeramey.<a href="mailto:beck@gmail.com">beck@gmail.com</a></strong>. Support page: <a href="https://jbeck22.github.io/rigkit/">https://jbeck22.github.io/rigkit/</a></p>
+</article></section>
+  </main>
+
+  <footer><div class="rule"><span>Rigcam and Rigdesk are made by Jeramey Beck.</span><span><a href="index.html">Support</a> &middot; <a href="privacy-policy.html">Privacy Policy</a></span></div></footer>
+</body>
+</html>
